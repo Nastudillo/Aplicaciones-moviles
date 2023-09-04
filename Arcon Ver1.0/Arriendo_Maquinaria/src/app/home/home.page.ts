@@ -12,7 +12,7 @@ export class HomePage implements OnInit {
   
   user={
     usuario:"",
-    contra:""
+    password:""
   }
   // variable para mostrar el campo faltante
   field:string="";
@@ -33,7 +33,7 @@ export class HomePage implements OnInit {
       }
       this.router.navigate(['/menu'],navigationextras);
     }else{
-      this.presentToast("bottom","Falta "+this.field,4000);
+      this.presentToast("bottom","Ingrese su "+this.field,4000);
     }
     
   }

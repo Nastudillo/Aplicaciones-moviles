@@ -1,0 +1,64 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <h1>Bienvenido</h1>
+      <ion-item>
+        <ion-label>Usuario</ion-label>
+        <ion-label *ngIf="data">{{data.usuario}} </ion-label>
+      </ion-item>
+      <b class="ion-text-center">
+        <h4>Información Adicional</h4>
+      </b>
+      <ion-item class="ion-padding-horizontal">
+        <ion-label position="stacked" >Rut:</ion-label>
+        <ion-label *ngIf="run">  
+          {{run}} 
+          </ion-label>
+        <ion-input type="text" [(ngModel)]="rut"> </ion-input>
+      </ion-item>
+
+      <ion-item class="ion-padding-horizontal">
+        <ion-label position="stacked" >Nombre: </ion-label>
+        <ion-label *ngIf="name">  
+          {{name}}  
+          </ion-label>
+        <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-padding-horizontal">
+        <ion-label position="stacked" >Apellido: </ion-label>
+        <ion-label *ngIf="lastname">  
+          {{lastname}} 
+          </ion-label>
+        <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item class="ion-padding-horizontal">
+        <ion-label position="stacked" >Fecha de Nacimiento:  </ion-label>
+        <ion-label *ngIf="bird">  
+          {{bird}}
+          </ion-label>
+        <ion-input type="date" [(ngModel)]="nacimiento"></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-button [routerLink]="['/menu']">Volver</ion-button>
+    <ion-button [routerLink]="['/menu']" (click)="guardar()">Guardar</ion-button>
+  </ion-item>
+  
+</ion-content>
+
