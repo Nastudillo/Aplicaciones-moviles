@@ -1,0 +1,7 @@
+{
+  "name": "Arriendo_Maquinaria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
