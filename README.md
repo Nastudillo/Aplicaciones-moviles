@@ -7,21 +7,21 @@ ionic s
 
 Para instalar android Studio:
 
-npm install @capacitor/android
-npx cap add android
-Ionic build Android
+npm install @capacitor/android ,
+npx cap add android ,
+Ionic build Android ,
 
-ionic capacitor sync android
+ionic capacitor sync android ,
 
 Para iniciar android Studio:
 
-npx cap open android
+npx cap open android ,
 
 
 opcional:
-esto es para el dark mode
-npm install @capacitor/preferences
-npx cap sync
+esto es para el dark mode ,
+npm install @capacitor/preferences ,
+npx cap sync,
 
 
 para el pc de la profe
