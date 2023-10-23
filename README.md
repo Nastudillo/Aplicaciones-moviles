@@ -22,3 +22,7 @@ opcional:
 esto es para el dark mode
 npm install @capacitor/preferences
 npx cap sync
+
+
+para el pc de la profe
+npm.cmd i -D -E @angular/cli
