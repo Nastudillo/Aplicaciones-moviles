@@ -1,0 +1,134 @@
+[
+    {
+      "id": 1,
+      "nombre": "CRISTOBAL ALVAREZ",
+      "username": "cr.alvarezm@duocuc.cl",
+      "password": "123456"      
+    },
+    {
+      "id": 2,
+      "nombre": "GUILLERMO ARENAS",
+      "username": "guil.arenas@duocuc.cl",
+      "password": "123456"     
+    },
+    {
+      "id": 3,
+      "nombre": "NICOLAS ASTUDILLO",
+      "username": "ni.astudillob@duocuc.cl",
+      "password": "123456"     
+    },
+    {
+      "id": 4,
+      "nombre": "FABIAN CALDERON",
+      "username": "fabi.calderon@duocuc.cl",
+      "password": "123456"     
+    },
+    {
+      "id": 5,
+      "nombre": "NICOLAS CASTILLO",
+      "username": "nico.castillod@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 6,
+      "nombre": "DANIEL CASTILLO",
+      "username": "d.castillo3@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 7,
+      "nombre": "JULIO COHEN",
+      "username": "ju.cohen@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 8,
+      "nombre": "JAVIER COLOMA",
+      "username": "j.colomat@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 9,
+      "nombre": "PATRICIO GONZALEZ",
+      "username": "pat.gonzalezg@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 10,
+      "nombre": "MARCO LARA",
+      "username": "ma.larao@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 11,
+      "nombre": "FELIPE LLANCA",
+      "username": "fe.llanca@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 12,
+      "nombre": "MATIAS MELLA",
+      "username": "ma.mellac@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 13,
+      "nombre": "SEBASTIAN MORALES",
+      "username": "sebas.moralesm@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 14,
+      "nombre": "MATIAS OSSIO",
+      "username": "ma.ossio@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 15,
+      "nombre": "EDUARDO PALACIO",
+      "username": "ed.palacio@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 16,
+      "nombre": "NICOLAS PALMA",
+      "username": "ni.palmav@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 17,
+      "nombre": "MIGUEL PEREIRA",
+      "username": "migu.pereira@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 18,
+      "nombre": "FABIAN PULGAR",
+      "username": "fabi.pulgar@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 19,
+      "nombre": "MATIAS SALDIVAR",
+      "username": "ma.saldivar@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 20,
+      "nombre": "JAVIER SANCHEZ",
+      "username": "javi.sanchez@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 21,
+      "nombre": "IGNACIO VEGAS",
+      "username": "ign.vegas@duocuc.cl",
+      "password": "123456"
+    },
+    {
+      "id": 22,
+      "nombre": "JOAQUIN VILLALON",
+      "username": "joa.villalon@duocuc.cl",
+      "password": "123456"
+    }
+  ]
