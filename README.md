@@ -1,8 +1,8 @@
 # Aplicaciones-moviles Nicolas Astudillo
 Para abrir el proyecto:
-npm i
-npm install -g @angular/cli
-ionic s
+npm i ,
+npm install -g @angular/cli ,
+ionic s ,
 
 
 Para instalar android Studio:
@@ -24,5 +24,5 @@ npm install @capacitor/preferences ,
 npx cap sync,
 
 
-para el pc de la profe
+para el pc de la profe:
 npm.cmd i -D -E @angular/cli
