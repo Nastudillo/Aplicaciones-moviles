@@ -1,0 +1,7 @@
+{
+  "name": "conec-fire",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,17 @@
+<app-header  [darkModel]="true" title="Error 404" ></app-header>
+
+
+<ion-card class="ion-text-center">
+  <img alt="gif error 404" [width]="250" src="assets/icon/Animation - 1698008361543.gif" />
+  <ion-card-header>
+    <ion-card-title>La Pagina no se Encontro</ion-card-title>
+    <ion-card-title>Lamentablemente no se pudo acceder a la pagina</ion-card-title>
+    <ion-button expand="block" class="ion-magin" [routerLink]="['/main/home']">
+    Volver
+    </ion-button>
+  </ion-card-header>
+</ion-card>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>

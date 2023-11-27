@@ -1,0 +1,71 @@
+<app-header [showMenu]="true" [darkModel]="true" title="Inicio"></app-header>
+
+<ion-content>
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!--productos-->
+  <ion-list *ngIf="!loading" >
+    <ion-item-sliding class="products-item" *ngFor="let p of products">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="p.imagen" />
+        </ion-avatar>
+        <ion-label>
+          <div class="name">{{p.name}}</div>
+          <div>
+            <strong>Precio: </strong> {{p.precio | currency: 'CLP'}} <br>
+            <strong>Disponibilidad: </strong> {{p.disponibilidad}}
+          </div>
+        </ion-label>
+      </ion-item>
+      <!--opciones-->
+      <ion-item-options >
+        <!--editar-->
+        <ion-item-option  (click)="addUpdateProduct(p)">
+          <ion-icon class="option-btn" name="create-outline"></ion-icon>
+        </ion-item-option>
+        <!--borrar-->
+        <ion-item-option (click)="confirmDeleteProduct(p)" color="danger">
+          <ion-icon class="option-btn" name="trash-outline"></ion-icon>
+        </ion-item-option>
+
+      </ion-item-options>
+
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <!--loading-->
+  <ion-list *ngIf="loading">
+
+    <ion-item class="products-item" *ngFor="let p of [1,1,1,1,1,1,1,1]">
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated style="width: 100%; height: 100%;"></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <div> <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></div>
+        <div> <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></div>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+ <!--no hay maquinarias disponibles-->
+  <div *ngIf="!loading && !products.length" class="empty">
+    <ion-icon name="shield-outline"></ion-icon>
+    <h3>No hay maquinarias disponibles</h3>
+  </div>
+
+  <!--Agregar Productos-->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addUpdateProduct()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+
+
+</ion-content>

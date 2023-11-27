@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <!--boton para volver-->
+      <ion-back-button *ngIf="backButton" [defaultHref]="backButton"></ion-back-button>
+      <!--boton para cerrar modal-->
+      <ion-button (click)="dismissModal()" *ngIf="isModal">
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+
+    
+
+
+      
+        <ion-menu-button *ngIf="showMenu" menu="menu-content"></ion-menu-button>
+      
+
+    </ion-buttons>
+
+    <ion-buttons  slot="end" >
+      <ion-icon name="moon"></ion-icon>
+      <ion-toggle slot="end" [checked]="darkMode" (ionChange)="toggleDarkMode()">
+      </ion-toggle>
+    </ion-buttons>
+
+    <ion-title>
+      <strong>{{title}}</strong>
+      <div class="admin">ARCON</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
