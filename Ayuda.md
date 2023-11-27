@@ -3,6 +3,7 @@
 npm i --legacy-peer-deps ,
 npm install -g @angular/cli ,
 npm install nodemailer --legacy-peer-deps
+npm install @emailjs/browser --legacy-peer-deps
 ionic s
 
 si no funciona algo agregar --legacy-peer-deps
