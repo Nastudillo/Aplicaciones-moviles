@@ -39,9 +39,16 @@ export class FirebaseService {
     return updateProfile(getAuth().currentUser, { displayName })
   }
 
-  // enviar email para restablecer contrasenna
+  // enviar email para restablecer contraseña
   sendRecoveryEmail(email: string) {
     return sendPasswordResetEmail(getAuth(), email);
+  }
+
+  // obtener usuarios por uid
+
+  async getUid() {
+   const user = await this.auth.currentUser;
+   return user.uid;
   }
 
   //cerrar sesion
@@ -49,6 +56,18 @@ export class FirebaseService {
     getAuth().signOut();
     localStorage.removeItem('user');
     this.utilsSvc.routerLink('/auth')
+  }
+
+  stateUser() {
+    return this.auth.authState;
+  }
+
+  getDocU<tipo>(path: string, id: string) {
+    return this.firestore.collection(path).doc<tipo>(id).valueChanges()
+  }
+
+  updateDocU(path: string, id: string, data:any){
+    return this.firestore.collection(path).doc(id).update(data);
   }
 
   //-----base de datos

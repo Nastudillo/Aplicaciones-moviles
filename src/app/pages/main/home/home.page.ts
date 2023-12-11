@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
   loading: boolean = false;
   admin: boolean = false;
   users: User[] = [];
-  
+  adm= 'OMtHP6V8Tya6J2qrWhuc6v9AhHD2'; 
 
   ngOnInit() {
   }
@@ -94,6 +94,63 @@ export class HomePage implements OnInit {
       ]
     });
   }
+
+  //confirmacion del producto
+  async confirmSoliciProduct(product: Product) {
+    this.utilsSvc.presentAlert({
+      header: 'Solicitar Producto',
+      message: 'Quieres Solicitar Maquinaria?',
+      buttons: [
+        {
+          text: 'Cancelar',
+        }, {
+          text: 'Si, Solicitar',
+          handler: () => {
+            //Aqui es donde se manda el correo
+            this.solicitarProduc(product)
+          }
+        }
+      ]
+    });
+  }
+
+  //Envio de correo con el producto
+  solicitarProduc(product: Product){
+
+    let user = this.user()
+    const templateParams = {
+      from_name: user.name,
+      mail_cliente: user.email,
+      nombre_maquina: product.name,
+      id_maquina: product.id,
+      valor_maquina: product.precio,
+    };
+
+    emailjs.send('service_fhjd3c9', 'template_ld42pwr', templateParams, '_ZByTdFiwZNBW3KD4')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        this.utilsSvc.presentToast({
+          message: 'Se ha enviado a su correo el detalle del arriendo',
+          duration: 1500,
+          color: 'success',
+          position: 'middle',
+          icon: 'checkmark-circle-outline'
+
+        })
+
+      }, (err) => {
+        console.log('FAILED...', err);
+        this.utilsSvc.presentToast({
+          message: 'Se produjo un error al mandar el correo',
+          duration: 2500,
+          position: 'middle',
+          icon: 'alert-circle-outline'
+
+        })
+      });
+
+  }
+
 
 
   //eliminar producto

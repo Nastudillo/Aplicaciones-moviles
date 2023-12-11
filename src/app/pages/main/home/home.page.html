@@ -20,9 +20,12 @@
             <strong>Disponibilidad: </strong> {{p.disponibilidad}}
           </div>
         </ion-label>
+        <ion-button color="primary"  (click)="confirmSoliciProduct(p)" expand="block" shape="round">
+          Solicitar
+        </ion-button>
       </ion-item>
       <!--opciones-->
-      <ion-item-options >
+      <ion-item-options *ngIf="user()?.uid == adm">
         <!--editar-->
         <ion-item-option  (click)="addUpdateProduct(p)">
           <ion-icon class="option-btn" name="create-outline"></ion-icon>
@@ -59,7 +62,7 @@
   </div>
 
   <!--Agregar Productos-->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab *ngIf="user()?.uid == adm" vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="addUpdateProduct()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>

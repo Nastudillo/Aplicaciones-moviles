@@ -11,16 +11,23 @@
     <ion-icon name="camera-outline"></ion-icon>
   </ion-button>
 
-  <h2>{{user().name}}</h2>
 
-  <ion-item button detail>
-    <ion-icon slot="start" name="person-outline"></ion-icon>
-    <ion-label>Editar Perfil</ion-label>
-  </ion-item>
+  <ion-list *ngIf="info">
+    <ion-item button >
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+      <ion-label >Nombre: {{info.name}}</ion-label>
+      <ion-icon (click)="presentAlert('name')" slot="end" name="create"></ion-icon>
+    </ion-item>
+    <ion-item button>
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-label>Correo: {{info.email}}</ion-label>
+      <ion-icon (click)="presentAlert('email')" slot="end" name="create"></ion-icon>
+    </ion-item>
+  </ion-list>
 
   <ion-item button detail>
     <ion-icon slot="start" name="Document-outline"></ion-icon>
-    <ion-label (click) = enviarCorreoTerminos()>Terminos & condiciones</ion-label>
+    <ion-label (click) = "enviarCorreoTerminos()">Terminos & condiciones</ion-label>
   </ion-item>
 
 </ion-content>

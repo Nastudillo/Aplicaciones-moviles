@@ -13,6 +13,8 @@ export class UtilsService {
   router = inject(Router);
   alertCtrl = inject(AlertController);
 
+  loadingP: any;
+
   async takePicture(promptLabelHeader: string) {
     return await Camera.getPhoto({
       quality: 90,
@@ -46,6 +48,26 @@ export class UtilsService {
   async presentToast(opts?: ToastOptions) {
     const toast = await this.toastCtrl.create(opts);
     toast.present();
+  }
+ // para el perfil
+  async presentToastP(mensaje: string) {
+    const toast = await this.toastCtrl.create({
+      message: mensaje,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  async presentLoading(mensaje: string) {
+     this.loadingP = await this.loadingCtrl.create({
+      cssClass: 'my-custom-class',
+      message: mensaje
+    });
+    await this.loadingP.present();
+  }
+
+  async closeLoading() {
+    await this.loadingP.dismiss();
   }
 
   // enruta a cualquier pagina disponible
