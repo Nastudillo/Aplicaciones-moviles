@@ -5,6 +5,11 @@ npm install -g @angular/cli ,
 npm install nodemailer --legacy-peer-deps
 ionic s
 
+/*   esto es para que deje abrir ionic (ejecutar como administrador)
+npm install -g @ionic/cli
+Set-ExecutionPolicy unrestricted   */
+
+
 si no funciona algo agregar --legacy-peer-deps
 
 npm install @awesome-cordova-plugins/core --save --legacy-peer-deps
